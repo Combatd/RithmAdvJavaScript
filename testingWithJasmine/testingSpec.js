@@ -20,18 +20,19 @@ and returns the string with the replacements.
 Write tests to make sure this is case sensitive
 */
 
-describe('replaceWith', () => {
+
+describe('#replaceWith', () => {
     
     it('returns a string with the replacements', () => {
-        expect(replaceWith("awesome", "e", "z").toEqual("awesomz"));
+        expect(replaceWith("awesome", "e", "z")).toEqual("awzsomz");
     });
 
     it('returns a string without changing capitalization (case sensitive)', () => {
-        expect(replaceWith('Foo', 'F', 'B').toEqual('Boo'));
+        expect(replaceWith('Foo', 'F', 'B')).toEqual('Boo');
     });
 });
 
-describe('expand', () => {
+describe('#expand', () => {
 
     it('returns a copy of the array with as many numbers as specified', () => {
         expect(expand([1, 2, 3], 3)).toEqual([1,2,3,1,2,3,1,2,3]);
