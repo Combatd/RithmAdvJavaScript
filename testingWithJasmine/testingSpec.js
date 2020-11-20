@@ -24,4 +24,8 @@ describe('replaceWith', () => {
     it('takes in a string, a character to replace, and a character to replace it with as parameters, and returns a string with the replacements', () => {
         expect(replaceWith("awesome", "e", "z").toEqual("awesomz"));
     });
+
+    it('returns a string without changing capitalization (case sensitive)', () => {
+        expect(replaceWith('Foo', 'F', 'B').toEqual('Boo'));
+    });
 });
