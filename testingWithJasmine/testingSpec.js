@@ -22,7 +22,6 @@ Write tests to make sure this is case sensitive
 
 
 describe('#replaceWith', () => {
-    
     it('returns a string with the replacements', () => {
         expect(replaceWith("awesome", "e", "z")).toEqual("awzsomz");
     });
@@ -33,7 +32,6 @@ describe('#replaceWith', () => {
 });
 
 describe('#expand', () => {
-
     it('returns a copy of the array with as many numbers as specified', () => {
         expect(expand([1, 2, 3], 3)).toEqual([1,2,3,1,2,3,1,2,3]);
         expect(expand(['foo', 'test'],1)).toEqual(['foo', 'test']);

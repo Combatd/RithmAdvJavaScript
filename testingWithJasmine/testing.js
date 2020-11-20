@@ -12,15 +12,13 @@ function replaceWith(str, charToReplace, newChar) {
     if (typeof(str) !== 'string' || typeof(charToReplace) !== 'string' || typeof(newChar) !== 'string') {
         return false;
     }
-
-    const strArr = str.split('');
-    strArr.forEach(char => {
+    newStrArr = []
+    str.split('').forEach(char => {
         if (char === charToReplace) {
-            char = newChar; // reassign the current element in the array
+            newStrArr.push(newChar) // reassign the current element in the array
+        } else {
+            newStrArr.push(char);
         }
     });
-    console.log(strArr)
-    return strArr.join('');
+    return newStrArr.join('');
 }
-
-replaceWith("awesome", "e", "z")
