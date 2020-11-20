@@ -41,4 +41,9 @@ describe('expand', () => {
         expect(typeof(arr)).toEqual('object');
         expect(typeof(num)).toEqual('number');
     });
+
+    it('returns a copy of the array with as many numbers as specified', () => {
+        expect(expand([1, 2, 3], 3)).toEqual([1,2,3,1,2,3,1,2,3]);
+        expect(expand(['foo', 'test'],1)).toEqual(['foo', 'test']);
+    });
 });
