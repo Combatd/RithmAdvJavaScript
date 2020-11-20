@@ -70,6 +70,14 @@ describe("Arrays", function () {
 //     });
 // });
 
+function onlyStrings(arr) {
+    const strings = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (typeof arr[i] === "string") strings.push(arr[i]);
+    }
+    return strings;
+}
+
 describe("onlyStrings", function () {
     it("returns an array", function () {
         expect(onlyStrings([1, 2, 3])).toEqual(jasmine.any(Array));
