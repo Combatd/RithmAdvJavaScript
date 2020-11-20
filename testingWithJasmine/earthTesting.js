@@ -70,12 +70,18 @@ describe("Arrays", function () {
 //     });
 // });
 
-function onlyStrings(arr) {
-    const strings = [];
-    for (let i = 0; i < arr.length; i++) {
-        if (typeof arr[i] === "string") strings.push(arr[i]);
-    }
-    return strings;
+// function onlyStrings(arr) {
+//     const strings = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         if (typeof arr[i] === "string") strings.push(arr[i]);
+//     }
+//     return strings;
+// }
+
+const onlyStrings = (arr) => {
+    return arr.filter((ele) => { 
+        return typeof ele === 'string'; 
+    });
 }
 
 describe("onlyStrings", function () {
