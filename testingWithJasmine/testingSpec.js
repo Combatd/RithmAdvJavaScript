@@ -21,11 +21,6 @@ Write tests to make sure this is case sensitive
 */
 
 describe('replaceWith', () => {
-    it('takes in a string, a character to replace, and a character to replace it with as parameters', () => {
-        expect(typeof(str)).toEqual('string');
-        expect(typeof(charToReplace)).toEqual('string');
-        expect(typeof(newChar)).toEqual('string');
-    });
     
     it('returns a string with the replacements', () => {
         expect(replaceWith("awesome", "e", "z").toEqual("awesomz"));
@@ -37,10 +32,6 @@ describe('replaceWith', () => {
 });
 
 describe('expand', () => {
-    it('takes an array and a number', () => {
-        expect(typeof(arr)).toEqual('object');
-        expect(typeof(num)).toEqual('number');
-    });
 
     it('returns a copy of the array with as many numbers as specified', () => {
         expect(expand([1, 2, 3], 3)).toEqual([1,2,3,1,2,3,1,2,3]);
