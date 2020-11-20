@@ -38,6 +38,7 @@ describe('replaceWith', () => {
 
 describe('expand', () => {
     it('takes an array and a number', () => {
-        expect()
+        expect(typeof(arr)).toEqual('object');
+        expect(typeof(num)).toEqual('number');
     });
 });
