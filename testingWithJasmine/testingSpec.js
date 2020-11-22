@@ -64,3 +64,15 @@ describe('#mergeArrays', () => {
         expect(mergeArrays([2, 1], [3, 4])).toEqual([1, 2, 3, 4]);
     });
 });
+
+/*
+Write a function called mergeObjects which takes in two objects 
+and return an object with the keys and values combined. 
+If the second parameter has the same key - it should override first one. 
+There is a built in function called Object.assign - 
+research it, but do not use it, try to do this on your own!
+*/
+
+describe('#mergeObjects', () => {
+    
+});
