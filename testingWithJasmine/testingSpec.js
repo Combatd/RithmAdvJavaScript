@@ -92,4 +92,24 @@ describe('#mergeObjects', () => {
             }
         )
     });
+
+    it('reassigns the values of keys that both objects share to the second object key value pairs', () => {
+        expect(mergeObjects(
+            {
+                name: "Foo",
+                num: 33
+            },
+            {
+                test: "thing",
+                num: 55
+            }
+        ))
+        .toEqual(
+            {
+                name: "Foo",
+                num: 55,
+                test: "thing"
+            }
+        )
+    });
 });
