@@ -22,3 +22,14 @@ function replaceWith(str, charToReplace, newChar) {
     });
     return newStrArr.join('');
 }
+
+const expand = (arr, copies) => {
+    allCopies = []
+    copiedArr = arr.map((element) => { return element });
+    for(let i = 0; i < copies; i++) {
+        for (let j = 0; j < copiedArr.length; j++) {
+            allCopies.push(copiedArr[j])
+        }
+    }
+    return allCopies;
+};
