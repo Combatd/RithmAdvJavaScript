@@ -74,5 +74,22 @@ research it, but do not use it, try to do this on your own!
 */
 
 describe('#mergeObjects', () => {
-    
+    it('takes in two objects and returns a object with the keys and values combined', () => {
+        expect(mergeObjects(
+            {
+                name: "Foo",
+                num: 33
+            }, 
+            {
+                test: "Bar"
+            }
+        ))
+        .toEqual(
+            {
+                name: "Foo",
+                num: 33,
+                test: "Bar"
+            }
+        )
+    });
 });
