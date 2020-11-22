@@ -56,3 +56,19 @@ const mergeArrays = (arr1, arr2) => {
 const compareNumbers = (a, b) => {
     return a - b;
 }
+
+function mergeObjects(obj1, obj2) {
+    mergedObject = {}
+    firstObjectKeys = Object.keys(obj1); // store all obj1 keys in an array
+    secondObjectKeys = Object.keys(obj2); // store all obj2 keys in an array
+
+    for (let i = 0; i < firstObjectKeys.length; i++) {
+        mergedObject[firstObjectKeys[i]] = obj1[firstObjectKeys[i]];
+    }
+
+    for (let j = 0; j < secondObjectKeys.length; j++) {
+        mergedObject[secondObjectKeys[j]] = obj2[secondObjectKeys[j]];
+    }
+
+    return mergedObject;
+}
