@@ -37,3 +37,22 @@ function acceptNumbersOnly(...numbers) {
    }
     return true;
 }
+
+const mergeArrays = (arr1, arr2) => {
+    // sort the arrays in place
+    arr1.sort(compareNumbers);
+    arr2.sort(compareNumbers);
+
+    if (arr1[arr1.length - 1] < arr2[arr2.length - 1]) {
+        return arr1.concat(arr2);
+    } else if (arr1[arr1.length - 1] > arr2[arr2.length - 1]) {
+        return arr2.concat(arr1);
+    }
+
+    return arr1.concat(arr2).sort(compareNumbers(a, b));
+};
+
+// helper function
+const compareNumbers = (a, b) => {
+    return a - b;
+}
