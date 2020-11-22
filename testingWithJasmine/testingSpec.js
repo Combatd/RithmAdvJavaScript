@@ -56,5 +56,7 @@ describe('#acceptNunbersOnly', () => {
 });
 
 describe('#mergeArrays', () => {
-    
+    it('takes in two arrays and returns one array', () => {
+        expect(mergeArrays([1], [2])).toEqual([1, 2]); 
+    });
 });
