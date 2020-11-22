@@ -59,4 +59,8 @@ describe('#mergeArrays', () => {
     it('takes in two arrays and returns one array', () => {
         expect(mergeArrays([1], [2])).toEqual([1, 2]); 
     });
+
+    it('returns one array with the values sorted', () => {
+        expect(mergeArrays([2, 1], [3, 4])).toEqual([1, 2, 3, 4]);
+    });
 });
