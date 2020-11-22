@@ -46,11 +46,11 @@ Watch out for NaN - it is a typeof "number"!
 
 describe('#acceptNunbersOnly', () => {
     it('takes in any number of arguments and returns true if all of them are numbers', () => {
-        expect(acceptNumbersOnly(1, "foo")).toEqual('false');
-        expect(acceptNumbersOnly(1, 2, 3, 4, 5, 6, 7)).toEqual('true');
+        expect(acceptNumbersOnly(1, "foo")).toEqual(false);
+        expect(acceptNumbersOnly(1, 2, 3, 4, 5, 6, 7)).toEqual(true);
     });
 
     it('returns false when NaN is an argument', () => {
-        expect(acceptNumbersOnly(1, 2, 3, 4, 5, 6, NaN)).toEqual('false');
+        expect(acceptNumbersOnly(1, 2, 3, 4, 5, 6, NaN)).toEqual(false);
     });
 });

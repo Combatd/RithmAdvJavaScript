@@ -33,3 +33,16 @@ const expand = (arr, copies) => {
     }
     return allCopies;
 };
+
+// spread operator allows for unlimited parameters in an array
+function acceptNumbersOnly(...numbers) {
+   for (let i = 0; i < numbers.length; i++) {
+        // NaN is falsey, so it will compare to false
+       if (isNaN(numbers[i]) || typeof (numbers[i]) !== 'number') {
+           return false;
+       }
+   }
+    return true;
+}
+
+console.log(acceptNumbersOnly(1, 'foo'));
