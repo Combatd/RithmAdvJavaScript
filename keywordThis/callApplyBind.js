@@ -50,4 +50,4 @@ You should stop the user from guessing if the amount of guesses they have made i
 greater than the initial amount passed to the outer function.
 
 You will have to make use of closure to solve this problem.
-/*
+*/
