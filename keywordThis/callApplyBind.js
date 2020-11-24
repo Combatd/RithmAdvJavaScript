@@ -12,11 +12,13 @@ Write a function called sumEvenArguments which takes all of the arguments passed
 and returns the sum of the even ones.
 */
 function sumEvenArguments(...numbers) {
-    return numbers.reduce( (sum, number) => {
+    let sum = 0;
+    numbers.forEach(number => {
         if (number % 2 === 0) {
-            sum + number;
+            sum += number;
         }
-    }); 
+    });
+    return sum;
 }
 
 
