@@ -83,6 +83,24 @@ const guessingGame = (amount) => {
     const answer = Math.floor(Math.random * 11); // goes between 0 and 10
     const guesses = 0; // accumulator counts the number of current guesses
     return function(guess) {
-        
+        if (guesses >= amount) {
+            return "The game is finished!";
+        }
+
+        if(guesses < amount) {
+            guesses += 1; // iterate the count of guesses
+            if(guesses < answer) {
+                return "You're too low!";
+            }
+            if (guess > answer) {
+                return "You're too high!";
+            }
+            
+            if (guess === answer) {
+                return "You got it!";
+            } else {
+                return `No more guesses - the answer is ${answer}`;
+            }
+        }
     }
 }
