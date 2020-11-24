@@ -46,6 +46,15 @@ If the counter is greater than the maximum amount,
 the inner function should return "Maxed Out!"
 */
 
+describe('#invokeMax', () => {
+    it('returns a function when called increments a counter', () => {
+
+    });
+
+    it('inner function should return "Maxed Out!" when the counter is greater than the maximum amount', () => {
+        
+    });
+});
 
 
 
