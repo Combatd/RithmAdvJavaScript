@@ -5,7 +5,7 @@ and returns the sum of the even ones.
 
 describe('#sumEvenArguments', () => {
     it('takes all of the arguments passed to a function', () => {
-
+        expect(sumEvenArguments(1,2,3,4)).not.toThrow();
     });
 
     it('returns the sum of the even arguments', () => {
