@@ -1,4 +1,4 @@
-var obj = {
+let obj = {
     fullName: "Harry Potter",
     person: {
         sayHi: function () {
@@ -11,7 +11,13 @@ var obj = {
 Write a function called sumEvenArguments which takes all of the arguments passed to a function 
 and returns the sum of the even ones.
 */
-
+function sumEvenArguments(...numbers) {
+    return numbers.reduce( (sum, number) => {
+        if (number % 2 === 0) {
+            sum + number;
+        }
+    }); 
+}
 
 
 
