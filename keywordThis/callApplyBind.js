@@ -78,3 +78,11 @@ greater than the initial amount passed to the outer function.
 
 You will have to make use of closure to solve this problem.
 */
+
+const guessingGame = (amount) => {
+    const answer = Math.floor(Math.random * 11); // goes between 0 and 10
+    const guesses = 0; // accumulator counts the number of current guesses
+    return function(guess) {
+        
+    }
+}
