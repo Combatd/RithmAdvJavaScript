@@ -47,12 +47,21 @@ the inner function should return "Maxed Out!"
 */
 
 describe('#invokeMax', () => {
-    it('returns a function when called increments a counter', () => {
-
+    function add(a,b){
+        return a+b
+    }
+    
+    it('returns a function calling another function when called increments a counter', () => {
+        var addWithoutHittingLimit = invokeMax(add, 10)
+        expect(addWithoutHittingLimit(1,0)).toEqual(1);
     });
 
     it('inner function should return "Maxed Out!" when the counter is greater than the maximum amount', () => {
-        
+        var addOnlyThreeTimes = invokeMax(add,3);
+        addOnlyThreeTimes(1,2) // 3
+        addOnlyThreeTimes(2,2) // 4
+        addOnlyThreeTimes(1,2) // 3
+        addOnlyThreeTimes(1,2) // "Maxed Out!"
     });
 });
 
