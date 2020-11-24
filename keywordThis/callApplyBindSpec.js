@@ -58,10 +58,10 @@ describe('#invokeMax', () => {
 
     it('inner function should return "Maxed Out!" when the counter is greater than the maximum amount', () => {
         var addOnlyThreeTimes = invokeMax(add,3);
-        addOnlyThreeTimes(1,2) // 3
-        addOnlyThreeTimes(2,2) // 4
-        addOnlyThreeTimes(1,2) // 3
-        addOnlyThreeTimes(1,2) // "Maxed Out!"
+        expect(addOnlyThreeTimes(1,2)).toEqual(3) // 3
+        expect(addOnlyThreeTimes(2,2)).toEqual(4) // 4
+        expect(addOnlyThreeTimes(1,2)).toEqual(3) // 3
+        expect(addOnlyThreeTimes(1,2)).toEqual("Maxed Out!") // "Maxed Out!"
     });
 });
 

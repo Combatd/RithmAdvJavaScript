@@ -42,6 +42,22 @@ If the counter is greater than the maximum amount,
 the inner function should return "Maxed Out!"
 */
 
+// call will immediately invoke the function that it is attached to. 
+// If you want to change the value of the keyword this, you can pass in the desired value as the first parameter to call 
+// (oftentimes this first argument is written in documentation as thisArg)
+function invokeMax(callback, thisArg) {
+    const max = [].slice.call(arguments, 1) // copies to a new array the arguments, and accesses thisArg (the max number) with the 1 index
+    let counter = 0;
+    return function() {
+        var innerArguments = [].slice.call(arguments); // copy over the arguments to a new array for the inner function context
+        if (counter >= max) {
+            return "Maxed Out!";
+        } else {
+            counter += 1;
+            return callback.apply(this, innerArguments)
+        }
+    }
+}
 
 
 
