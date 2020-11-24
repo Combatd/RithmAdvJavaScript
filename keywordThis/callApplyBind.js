@@ -28,7 +28,10 @@ Write a function called arrayFrom which
 converts an array-like-object into an array.
 */
 
-
+const arrayFrom = (arrayLikeObject) => {
+    const convertedArr = []; // initialize empty array
+    return convertedArr.slice.call(arrayLikeObject); // set this to arrayLikeObject, which gets its elements copied into convertedArr
+}
 
 
 

@@ -24,14 +24,16 @@ converts an array-like-object into an array.
 // Arguments passed into a function are array-like
 // DOM Manipulation methods, such as getElementById will return a NodeList which is array-like
 describe('#arrayFrom', () => {
-    const convertToArray = () => {  
-        const arr = arrayFrom(arguments)
-        return arr;
-    }
+    var arguments = {
+        0 : "a", 
+        1 : "b",
+        2 : "c", 
+        length : 3
+    };
 
     it('converts an array like object into an array', () => {
-        const argumentArr = convertToArray();
-        expect(argumentArr.reduce).to.be.function; // reducer method would work on an array
+        const argumentArr = arrayFrom(arguments);
+        expect(Array.isArray(argumentArr)).toEqual(true); // reducer method would work on an array
     });
 });
 
