@@ -21,7 +21,19 @@ Write a function called arrayFrom which
 converts an array-like-object into an array.
 */
 
+// Arguments passed into a function are array-like
+// DOM Manipulation methods, such as getElementById will return a NodeList which is array-like
+describe('#arrayFrom', () => {
+    const convertToArray = () => {  
+        const arr = arrayFrom(arguments)
+        return arr;
+    }
 
+    it('converts an array like object into an array', () => {
+        const argumentArr = convertToArray();
+        expect(argumentArr.reduce).to.be.function; // reducer method would work on an array
+    });
+});
 
 
 
