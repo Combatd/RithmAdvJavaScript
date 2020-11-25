@@ -17,3 +17,9 @@ describe("Person", function () {
         expect(sakuraMiko.hasOwnProperty('favoriteNumber')).toEqual(true);
     });
 });
+
+describe("#multiplyFavoriteNumber", () => {
+    it("takes in a number and returns the product of the number and the Person's favorite number", function () {
+        expect(sakuraMiko.multiplyFavoriteNumber(10)).toEqual(20);
+    });
+});

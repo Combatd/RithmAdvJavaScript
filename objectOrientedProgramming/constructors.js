@@ -13,10 +13,10 @@ function Person(firstName, lastName, favoriteColor, favoriteNumber) {
     this.favoriteColor = favoriteColor;
     this.favoriteNumber = favoriteNumber;
 
-    this.multiply = (number) => {
+    this.multiplyFavoriteNumber = (number) => {
         return this.favoriteNumber * number;
     }
 }
 
 let sakuraMiko = new Person('Miko', 'Sakura', 'Pink', 2);
-console.log(sakuraMiko.multiply(5));
+console.log(sakuraMiko.multiplyFavoriteNumber(5));
