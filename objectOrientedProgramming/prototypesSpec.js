@@ -42,3 +42,32 @@ describe("Person", function(){
         expect(p1.family.length).toEqual(0);
     });
   });
+
+  describe('#addToFamily', () => {
+    var p1, p2;
+    beforeEach(() => {
+      p1 = new Person()
+      p2 = new Person()
+    });
+
+    it("is not shared amongst all objects created from the Person constructor", () => {
+      p1.addToFamily(p1);
+      expect(p2.family.length).toEqual(0);
+    });
+
+    it("adds a new person to the family array ONCE", () => {
+      person.addToFamily(p1);
+      person.addToFamily(p1);
+      person.addToFamily(p1);
+      expect(person.family.length).toEqual(1);
+    });
+    
+    it("only adds objects created from the Person constructor to the array", () => {
+      person.addToFamily(p1);
+      person.addToFamily("test");
+      person.addToFamily({});
+      person.addToFamily([]);
+      person.addToFamily(false);
+      expect(person.family.length).toEqual(1);
+    });
+  });
