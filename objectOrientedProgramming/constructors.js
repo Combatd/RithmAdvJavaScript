@@ -20,3 +20,15 @@ function Person(firstName, lastName, favoriteColor, favoriteNumber) {
 
 let sakuraMiko = new Person('Miko', 'Sakura', 'Pink', 2);
 console.log(sakuraMiko.multiplyFavoriteNumber(5));
+
+function Parent(firstName, lastName, favoriteColor, favoriteFood) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.favoriteColor = favoriteColor;
+    this.favoriteFood = favoriteFood;
+}
+
+function Child(firstName, lastName, favoriteColor, favoriteFood) {
+    // call the constructor Parent on this Child instance being created with the new keyword
+    Parent.call(this, firstName, lastName, favoriteColor, favoriteFood);
+}
