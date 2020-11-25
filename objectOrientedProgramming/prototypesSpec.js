@@ -22,3 +22,9 @@ describe("Person", function(){
       expect(person.favoriteFoods).toEqual([]);
     });
   });
+
+  describe('#fullName', () => {
+    it('returns firstName concatenated with the lastName', () => {
+        expect(person.fullName()).toEqual('Miko Sakura');
+    });
+  });
