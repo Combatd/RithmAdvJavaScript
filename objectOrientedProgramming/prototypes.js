@@ -7,7 +7,14 @@ Add a function on the Person.prototype called fullName that
 returns the firstName and lastName property of an object created by the Person constructor concatenated together.
 */
 
-
+function Person(firstName, lastName, favoriteColor, favoriteNumber) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.favoriteColor = favoriteColor;
+    this.favoriteNumber = favoriteNumber;
+    this.favoriteFoods = new Array();
+    this.family = new Array();
+}
 
 
 
