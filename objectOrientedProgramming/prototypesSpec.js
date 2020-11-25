@@ -28,3 +28,17 @@ describe("Person", function(){
         expect(person.fullName()).toEqual('Miko Sakura');
     });
   });
+
+  describe('family', () => {
+    let p1, p2;
+    beforeEach(() => {
+        p1 = new Person();
+        p2 = new Person();
+    });
+
+    it('is initialized as an empty array on the Person object', () => {
+        expect(p1.family).toExist();
+        expect(Array.isArray(p1.family).toEqual(true));
+        expect(p1.family.length).toEqual(0);
+    });
+  });
