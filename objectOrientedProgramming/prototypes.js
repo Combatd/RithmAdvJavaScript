@@ -21,9 +21,12 @@ function Person(firstName, lastName, favoriteColor, favoriteNumber) {
 /*
 Overwrite the toString method from the Object prototype by creating a toString method for Person. 
 The toString method should return a string in the following format:
+Shana Malarkin, Favorite Color: Green, Favorite Number: 38
 */
 
-
+Person.prototype.toString = function() {
+    return `${this.firstName} ${this.lastName}, Favorite Color: ${this.favoriteColor}, Favorite Number: ${this.favoriteNumber}`;
+}
 
 
 

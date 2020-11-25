@@ -37,7 +37,7 @@ describe("Person", function(){
     });
 
     it('is initialized as an empty array on the Person object', () => {
-        expect(p1.family).toExist();
+        expect(p1.family).toBeDefined();
         expect(Array.isArray(p1.family).toEqual(true));
         expect(p1.family.length).toEqual(0);
     });
@@ -73,11 +73,11 @@ describe("Person", function(){
   });
 
   describe("#toString", () => {
-    let p1 = new Person("Marine", "Honshou", "Red", 17);
+    var p1 = new Person("Marine", "Honshou", "Red", 17);
 
     it("is shared amongst all objects created from the Person constructor", () => {
       expect(p1.hasOwnProperty('toString')).toEqual(false);
-      expect(Person.prototype.toString).toExist();
+      expect(Person.prototype.toString).toBeDefined();
     });
   
     it("returns all the info about the Person", () => {
