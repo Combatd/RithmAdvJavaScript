@@ -61,7 +61,7 @@ describe("Person", function(){
       person.addToFamily(p1);
       expect(person.family.length).toEqual(1);
     });
-    
+
     it("only adds objects created from the Person constructor to the array", () => {
       person.addToFamily(p1);
       person.addToFamily("test");
@@ -71,3 +71,18 @@ describe("Person", function(){
       expect(person.family.length).toEqual(1);
     });
   });
+
+  describe("#toString", () => {
+    let p1 = new Person("Marine", "Honshou", "Red", 17);
+
+    it("is shared amongst all objects created from the Person constructor", () => {
+      expect(p1.hasOwnProperty('toString')).toEqual(false);
+      expect(Person.prototype.toString).toExist();
+    });
+  
+    it("returns all the info about the Person", () => {
+      expect(p1.toString()).toEqual("Marine Honshou, Favorite Color: Red, Favorite Number: 17");
+    });
+  
+  });
+  
