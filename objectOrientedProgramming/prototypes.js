@@ -38,7 +38,15 @@ To make sure that the object you are adding is an object construced from the Per
 Make sure that your family array does not include duplicates! This method should return the length of the family array.
 */
 
+Person.prototype.addToFamily = function(personObj) {
+    if(personObj instanceof(Person)) { // make sure personObject is instatiated from Person Constructor
+        // Check to see if personObj is already in the this.family array
+        if (this.family.every((element) => { return !(JSON.stringify(personObj) === JSON.stringify(element)) })) {
+            this.family.push(personObj);
+        }
 
+    }
+}
 
 
 
