@@ -86,3 +86,15 @@ describe("Person", function(){
   
   });
   
+describe("Array.prototype.map", function(){
+  var arr = [1,2,3,4]
+  it("returns a new array of values with a callback run on each value", function(){
+    expect(arr.map(v => v*2)).toEqual([2,4,6,8])
+  });
+  it("allows access to the index as a second parameter", function(){
+    expect(arr.map((v,i) => i*2)).toEqual([0,2,4,6])
+  });
+  it("allows access to the array as the third parameter", function(){
+    expect(arr.map((v,i,a) => a.length)).toEqual([4,4,4,4])
+  });
+});
