@@ -63,7 +63,7 @@ Implement your own version of Function.prototype.bind
 Array.prototype.myMap = function() {
     copyArr = new Array;
     this.forEach((element) => {
-        copy_arr.push(element);
+        copyArr.push(element);
     });
     return copyArr;
 }

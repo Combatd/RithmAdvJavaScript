@@ -86,15 +86,44 @@ describe("Person", function(){
   
   });
   
-describe("Array.prototype.map", function(){
+describe("Array.prototype.myMap", function(){
   var arr = [1,2,3,4]
   it("returns a new array of values with a callback run on each value", function(){
-    expect(arr.map(v => v*2)).toEqual([2,4,6,8])
+    expect(arr.myMap(v => v*2)).toEqual([2,4,6,8])
   });
   it("allows access to the index as a second parameter", function(){
-    expect(arr.map((v,i) => i*2)).toEqual([0,2,4,6])
+    expect(arr.myMap((v,i) => i*2)).toEqual([0,2,4,6])
   });
   it("allows access to the array as the third parameter", function(){
-    expect(arr.map((v,i,a) => a.length)).toEqual([4,4,4,4])
+    expect(arr.myMap((v,i,a) => a.length)).toEqual([4,4,4,4])
   });
+});
+
+describe("Array.prototype.myReduce", function(){
+  var arr = [1,2,3,4]
+  it("adds numbers without an initial value", function(){
+    expect(arr.myReduce((acc,v) => acc+v)).to.equal(10)
+  });
+  it("adds numbers with an initial value", function() {
+    expect(arr.myReduce((acc,v) => acc+v, 10)).to.equal(20)
+  })
+  it("has an index as the 3rd parameter", function() {
+    expect(arr.myReduce((acc,v, i) => i === 3 ? "blah": null, 10)).to.equal("blah")
+  })
+  it("has an index array as the 4th parameter", function() {
+    expect(arr.myReduce((acc,v, i, arr) => arr.length, 10)).to.equal(4)
+  })
+  it("can return any type of data", function() {
+    var init = {name: "Tim", age: "33", numbers: []};
+    var res = arr.myReduce((acc,v, i, arr) => {
+      acc.numbers.push(v);
+      return acc;
+    }, init);
+    expect(res).toEqual(init)
+    expect(res.numbers).toBe("array");
+    expect(res.numbers).toEqual(init.numbers);
+    expect(res.numbers.length).toEqual(4);
+    expect(res.numbers).toEqual(arr);
+  })
+
 });
