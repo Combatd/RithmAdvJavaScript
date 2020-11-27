@@ -48,7 +48,9 @@ Person.prototype.addToFamily = function(personObj) {
     }
 }
 
-
+Person.prototype.fullName = function(personObj) {
+    return `${this.firstName} ${this.lastName}`;
+}
 
 /*
 Implement your own version of Array.prototype.map
