@@ -60,10 +60,10 @@ Implement a function that reverses a string and place it on the String.prototype
 Implement your own version of Function.prototype.bind
 */
 
-Array.prototype.myMap = function() {
+Array.prototype.myMap = function(callback) {
     copyArr = new Array;
-    this.forEach((element) => {
-        copyArr.push(element);
+    this.forEach((element, index) => {
+        copyArr.push(callback(element, index, this)); // run the callback on each element
     });
     return copyArr;
 }
