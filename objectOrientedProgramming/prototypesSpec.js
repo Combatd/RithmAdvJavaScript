@@ -38,7 +38,7 @@ describe("Person", function(){
 
     it('is initialized as an empty array on the Person object', () => {
         expect(p1.family).toBeDefined();
-        expect(Array.isArray(p1.family).toEqual(true));
+        expect(Array.isArray(p1.family)).toEqual(true);
         expect(p1.family.length).toEqual(0);
     });
   });
