@@ -57,3 +57,11 @@ Implement a function that reverses a string and place it on the String.prototype
 
 Implement your own version of Function.prototype.bind
 */
+
+Array.prototype.myMap = function() {
+    copyArr = new Array;
+    this.forEach((element) => {
+        copy_arr.push(element);
+    });
+    return copyArr;
+}
