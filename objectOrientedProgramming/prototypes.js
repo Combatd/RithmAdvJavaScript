@@ -76,10 +76,17 @@ Array.prototype.myMap = function(callback) {
 //     return selectedArr
 // }
 
-String.prototype.reverse = function() {
+String.prototype.myReverse = function() {
     let newStr = '';
     for (let i = 0; i < this.length; i++) {
         newStr += this[this.length - 1 - i]; // from lsat element to first
     }
     return newStr;
+}
+
+Function.prototype.myBind = function(otherThis, ...args) {
+    let _this = this;
+    return(function(...newArgs) {
+        return _this.apply(otherThis, args.concat(newArgs)); // could be any amount of args, so use .apply to change the context
+    });
 }
