@@ -67,3 +67,19 @@ Array.prototype.myMap = function(callback) {
     });
     return copyArr;
 }
+
+// Array.prototype.myReduce = function(fn) {
+//     selectedArr = new Array;
+//     this.forEach((element, index) => {
+//         selectedArr[0] += fn(element, index, this);
+//     });
+//     return selectedArr
+// }
+
+String.prototype.reverse = function() {
+    let newStr = '';
+    for (let i = 0; i < this.length; i++) {
+        newStr += this[this.length - 1 - i]; // from lsat element to first
+    }
+    return newStr;
+}
