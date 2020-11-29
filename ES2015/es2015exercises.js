@@ -12,9 +12,9 @@
 let person = {
     fullName: "Harry Potter",
     sayHi() {
-        setTimeout(( () => {
+        setTimeout( () => {
             console.log("Your name is " + this.fullName);
-        }).bind(this), 1000);
+        }, 1000);
     }
 }
 
