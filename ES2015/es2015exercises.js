@@ -33,6 +33,10 @@ const DO_NOT_CHANGE = 42;
 // arr[0] = arr[1]
 // arr[1] = temp
 
+const arr = [1,2];
+arr[0], arr[1] = arr[1], arr[0]; // destructuring array
+
+
 // function double(arr){
 //     return arr.map(function(val){
 //         return val*2
