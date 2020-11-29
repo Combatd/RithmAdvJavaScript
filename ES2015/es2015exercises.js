@@ -9,6 +9,15 @@
 //     }
 // }
 
+let person = {
+    fullName: "Harry Potter",
+    sayHi() {
+        setTimeout(( () => {
+            console.log("Your name is " + this.fullName);
+        }).bind(this), 1000);
+    }
+}
+
 // var name = "Josie"
 // console.log("When " + name + " comes home, so good")
 
