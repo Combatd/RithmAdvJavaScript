@@ -26,6 +26,7 @@ console.log(`When "${name}" comes home, so good`);
 
 // var DO_NOT_CHANGE = 42;
 // DO_NOT_CHANGE = 50; // stop me from doing this!
+const DO_NOT_CHANGE = 42;
 
 // var arr = [1,2]
 // var temp = arr[0]
