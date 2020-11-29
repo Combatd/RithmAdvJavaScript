@@ -21,6 +21,9 @@ let person = {
 // var name = "Josie"
 // console.log("When " + name + " comes home, so good")
 
+let name = "Josie";
+console.log(`When "${name}" comes home, so good`);
+
 // var DO_NOT_CHANGE = 42;
 // DO_NOT_CHANGE = 50; // stop me from doing this!
 
