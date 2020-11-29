@@ -63,6 +63,7 @@ let obj = {
 
 // var a = obj.numbers.a;
 // var b = obj.numbers.b;
+let a, b = obj.numbers // object destructuring
 
 // function add(a,b){
 //     if(a === 0) a = 0
