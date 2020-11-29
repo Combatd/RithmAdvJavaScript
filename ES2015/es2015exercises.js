@@ -43,6 +43,10 @@ arr[0], arr[1] = arr[1], arr[0]; // destructuring array
 //     });
 // }
 
+const double = (arr) => {
+    return arr.map((value) => { return value * 2 });
+}
+
 // var obj = {
 //     numbers: {
 //         a: 1,
