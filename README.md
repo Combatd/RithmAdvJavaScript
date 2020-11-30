@@ -11,8 +11,12 @@ This repository is for practicing some of the trickier parts of JavaScript, buil
     * Constructor Functions
     * Prototypes
     * Inheritance
-* Canvas
 * ES2015 JavaScript Syntax Standards
+    * Let, Cons, String Interpolation
+    * Arrow Functions
+    * Default Paramaters, Rest and Spread Operators
+    * Object Shorthand and Destructuring
+    * Classes
 * Asynchronous JavaScript
     * Promises
     * Generators and Async
