@@ -24,4 +24,15 @@ var logTwo = setTimeout(function() {
     console.log("two!");
 }, Math.random() * 1000);
   
-inOrder(logOne, logTwo);
+// inOrder(logOne, logTwo);
+
+
+function inOrderPromises(fn1, fn2) {
+    () => fn1
+    .then(() => fn2)
+    .catch(() => {
+        throw("arguments must be a function");
+    });
+}
+
+inOrderPromises(logOne, logTwo);
