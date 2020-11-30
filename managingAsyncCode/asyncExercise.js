@@ -18,7 +18,7 @@ const inOrder = (fn1, fn2) => {
 
 var logOne = setTimeout(function() {
     console.log("one!");
-}, Math.random() * 3000);
+}, Math.random() * 1000);
   
 var logTwo = setTimeout(function() {
     console.log("two!");
@@ -29,10 +29,27 @@ var logTwo = setTimeout(function() {
 
 function inOrderPromises(fn1, fn2) {
     () => fn1
-    .then(() => fn2)
-    .catch(() => {
-        throw("arguments must be a function");
-    });
+    .then( () => fn2)
 }
 
 inOrderPromises(logOne, logTwo);
+
+/*
+Example Asynchronous Javascript Request
+
+fetch('https://omdbapi.com?t=titanic').then(function(response){
+    return response.json().then(function(data){
+        console.log(data);
+    });
+});
+*/
+
+fetch('https://pokeapi.co/api/v2/pokemon/')
+.then((res) => res.json())
+.then((data) => {
+    const pokemons = data.results;
+
+    for(let i = 0; i < pokemons.length; i++) {
+        console.log(pokemons[i].name);
+    }
+});
