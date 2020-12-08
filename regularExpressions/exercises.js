@@ -41,3 +41,16 @@ function countNumbers(numbersString) {
 console.log(countNumbers("321321dsadsa930-29d132b13a")); // 16
 console.log(countNumbers("this is so wonderful")); // 0
 console.log(countNumbers("this is so 1234")); // 4
+
+/*
+capitalSentence
+Write a function called capitalSentence which accepts a string and 
+returns another string with all the capital letters joined together.
+*/
+
+function capitalSentence(str) {
+    let capitalLetters = ''
+}
+
+console.log(capitalSentence("The Cat In The Hat")); // "TCITH"
+console.log(capitalSentence("And I Think to Myself What a Wonderful World")); // "AITMWWW"
