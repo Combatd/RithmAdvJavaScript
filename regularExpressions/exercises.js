@@ -49,7 +49,10 @@ returns another string with all the capital letters joined together.
 */
 
 function capitalSentence(str) {
-    let capitalLetters = ''
+    let capitalLetters = '';
+    const capsRegex = new RegExp('[A-Z]', 'g');
+    let matches = str.match(capsRegex); // returns an array
+    return matches.join('');
 }
 
 console.log(capitalSentence("The Cat In The Hat")); // "TCITH"
