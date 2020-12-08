@@ -57,3 +57,20 @@ function capitalSentence(str) {
 
 console.log(capitalSentence("The Cat In The Hat")); // "TCITH"
 console.log(capitalSentence("And I Think to Myself What a Wonderful World")); // "AITMWWW"
+
+/*
+isValidPassword
+Write a function caled isValidPassword, which accepts a string. 
+If the string is longer than 7 characters and includes 
+at least one special character (!,@,#, or $), 
+the function should return true. Otherwise, return false
+*/
+
+function isValidPassword(password) {
+
+}
+
+console.log(isValidPassword('TacoCat')); // false
+console.log(isValidPassword('foo')); // false
+console.log(isValidPassword('awesome!')); // true
+console.log(isValidPassword('win!@')); // false
