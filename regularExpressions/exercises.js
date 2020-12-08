@@ -32,9 +32,12 @@ and returns the count of numbers between 0 and 9.
 */
 
 function countNumbers(numbersString) {
-    
+    const numbersRegEx = /[0-9]/gi;
+    let matches = numbersString.match(numbersRegEx);
+    if(matches) { return matches.length };
+    return 0;
 }
 
-// console.log(countNumbers("321321dsadsa930-29d132b13a")); // 16
-// console.log(countNumbers("this is so wonderful")); // 0
-// console.log(countNumbers("this is so 1234")); // 4
+console.log(countNumbers("321321dsadsa930-29d132b13a")); // 16
+console.log(countNumbers("this is so wonderful")); // 0
+console.log(countNumbers("this is so 1234")); // 4
