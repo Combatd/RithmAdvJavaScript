@@ -67,7 +67,8 @@ the function should return true. Otherwise, return false
 */
 
 function isValidPassword(password) {
-
+    if (typeof(password) !== 'string') { return false }
+    if (password.length < 7) { return false } 
 }
 
 console.log(isValidPassword('TacoCat')); // false
