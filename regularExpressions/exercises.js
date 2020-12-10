@@ -69,6 +69,8 @@ the function should return true. Otherwise, return false
 function isValidPassword(password) {
     if (typeof(password) !== 'string') { return false }
     if (password.length < 7) { return false } 
+    const passwordRegex = new RegExp('[a-zA-Z0-9][!@#$]', 'g');
+    return passwordRegex.test(password);
 }
 
 console.log(isValidPassword('TacoCat')); // false
