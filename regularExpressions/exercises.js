@@ -74,3 +74,14 @@ console.log(isValidPassword('TacoCat')); // false
 console.log(isValidPassword('foo')); // false
 console.log(isValidPassword('awesome!')); // true
 console.log(isValidPassword('win!@')); // false
+
+/* Sentence Count
+Create a function that will tell how many sentences are in a paragraph, 
+based on the number of periods ".", 
+question marks "?" and "!" exclamation points 
+that an input string contains.
+*/
+
+function sentenceCount(paragraph) {
+    
+}
