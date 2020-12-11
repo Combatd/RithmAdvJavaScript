@@ -83,5 +83,12 @@ that an input string contains.
 */
 
 function sentenceCount(paragraph) {
-    
+    const punctuationRegex = new RegExp('[.?!]', 'g');
+    let punctuationList = paragraph.matchAll(punctuationRegex);
+    return [...punctuationList].length; // spread operator copies into array and get length
 }
+
+console.log(sentenceCount('No punctuation'));
+console.log(sentenceCount('This is a sentence.'));
+console.log(sentenceCount('Can you hear me now? Good!'));
+console.log(sentenceCount('Too many things to do. Rawr! When do I get a break?'));
