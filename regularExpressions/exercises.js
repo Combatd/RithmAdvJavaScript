@@ -92,3 +92,19 @@ console.log(sentenceCount('No punctuation'));
 console.log(sentenceCount('This is a sentence.'));
 console.log(sentenceCount('Can you hear me now? Good!'));
 console.log(sentenceCount('Too many things to do. Rawr! When do I get a break?'));
+
+
+/* 
+Debug a function which would return true 
+if the input followed this time format 14-10-2016 01:12 and false otherwise.
+*/
+
+function isItBugged(code){
+    //hmm, Looks like its bugged man!
+     return this./^(\d{2}\d-){
+    }\d{2} \d\d;:;\d\d/".test[date];
+}
+
+console.log(isItBugged("01_09_2016 01:20"));
+console.log(isItBugged("14-10-1066 12:00"));
+console.log(isItBugged("Tenth of January"));
