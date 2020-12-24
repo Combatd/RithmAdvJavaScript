@@ -99,15 +99,15 @@ Debug a function which would return true
 if the input followed this time format 14-10-2016 01:12 and false otherwise.
 */
 
-function isItBugged(code){
-    //hmm, Looks like its bugged man!
-     return this./^(\d{2}\d-){
-    }\d{2} \d\d;:;\d\d/".test[date];
-}
+// function isItBugged(code){
+//     //hmm, Looks like its bugged man!
+//      return this./^(\d{2}\d-){
+//     }\d{2} \d\d;:;\d\d/".test[date];
+// }
 
-console.log(isItBugged("01_09_2016 01:20"));
-console.log(isItBugged("14-10-1066 12:00"));
-console.log(isItBugged("Tenth of January"));
+// console.log(isItBugged("01_09_2016 01:20"));
+// console.log(isItBugged("14-10-1066 12:00"));
+// console.log(isItBugged("Tenth of January"));
 
 /*
 Given an array of strings representing a list of usernames, return true only if all usernames comply with your company's guidelines. Return false otherwise.
@@ -132,5 +132,24 @@ You will always be given an array with at least 1 string to check. s
 */
 
 function authList(arr) {
-    // your awesome code here
+   const usernameRegex = new RegExp('[a-z\d]{1,}[^A-Z!@#$%^&*]{6,10}', 'g');
+   for(let i = 0; i < arr.length; i++) {
+       if(!usernameRegex.test(arr[i])) {
+           return false;
+       }
+   }
+   return true;
 }
+
+const usernames1 = ['john123', 'alex222', 'sandra1']; // true
+const usernames2 = ['john123', 'alex222', 'sandraW']; // false
+const usernames3 = ['john_123', 'alex222', 'sandra1']; // false
+const usernames4 = ['']; // false
+const usernames5 = ['123456']; // false
+const usernames6 = ['abcdef']; // false
+
+console.log(authList(usernames1));
+console.log(authList(usernames2));
+console.log(authList(usernames3));
+console.log(authList(usernames4));
+console.log(authList(usernames5));
